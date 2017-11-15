@@ -3,7 +3,7 @@
 
 > 네이티브 스크립트 설치 방법 MAC
 
-## 간단설치
+## Setup
 ### 1. Install Node.js (최신버전 Node 설치)
 
 ``` bash
@@ -18,12 +18,12 @@ install the latest “LTS” (long-term support)
 npm install -g nativescript
 ```
 
-## 3. Install iOS and Android requirements (IOS/Android 설치)
+### 3. Install iOS and Android requirements (IOS/Android 설치)
 ``` bash
 (sudo) ruby -e "$(curl -fsSL https://www.nativescript.org/setup/mac)"
 ```
 
-## 4. HomeBrew  (홈브류 설치)
+### 4. HomeBrew  (홈브류 설치)
 ``` bash
 # Install Homebrew to simplify the installation process. (홈브류 없을 경우)
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,8 +32,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 brew install node@6
 ```
+### 5. Verify the setup (이상유무 확인)
+``` bash
+tns doctor
+```
 
-## 5. Xcode (Xcode 설치 IOS)
+## Advanced Setup
+### 1. Xcode (Xcode 설치 IOS)
 ```bash
 xcode 최신 버전 설치 or Update
 
@@ -41,12 +46,12 @@ sudo gem install xcodeproj
 ```
 <https://developer.apple.com/download/more/>
 
-## 6. cocoapods (cocoapods 설치)
+### 2. cocoapods (cocoapods 설치)
 ``` bash
 sudo gem install cocoapods
 ```
 
-## 7. Install JDK 8 (JDK 8 설치 및 세팅)
+### 3. Install JDK 8 (JDK 8 설치 및 세팅)
 Install JDK 8
 <http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-macosx-x64.dmg>
 
@@ -86,7 +91,7 @@ Android SDK Platform 25, Android SDK Build-Tools 25.0.2 or later, Android Suppor
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;25.0.2" "extras;android;m2repository" "extras;google;m2repository"
 ```
 
-## 9. Verify the setup (이상유무 확인)
+### 4. Verify the setup (이상유무 확인)
 ``` bash
 tns doctor
 ```
