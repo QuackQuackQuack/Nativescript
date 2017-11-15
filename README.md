@@ -63,9 +63,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 #8버전 사용
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 ```
-##### Install the Android SDK. (안드로이드 스튜디오 설치)<br />
+##### Install the Android SDK. (안드로이드 스튜디오 설치)
 ###### (설치시 custom > AVD 같이 설치)<br />
-<https://developer.android.com/studio/index.html><br /><br />
+<https://developer.android.com/studio/index.html><br />
 ##### AVD
 <https://docs.nativescript.org/tooling/android-virtual-devices><br />
 <https://developer.android.com/studio/run/managing-avds.html?hl=ko><br />
@@ -74,6 +74,9 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 (안드로이드 스튜디오 설치 후에도 설치가 되지 않았다고 나올시)<br />
 ``` bash
 brew cask install android-sdk
+
+#delete
+brew cask uninstall android-sdk
 ```
 
 ##### Set the ANDROID_HOME system environment variable (환경변수 설정)
@@ -95,4 +98,18 @@ $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-2
 ``` bash
 tns doctor
 ```
+
+### 5. Run tns (실행)
+``` bash
+#ios
+tns run ios
+
+#android
+tns run android
+
+# Manually start Android emulator, tns run android will reuse running instance and it will not search for avd images
+# 설치 되었으나, 에뮬레이터 실행 안됬을경우 사용하여 해결
+tns run android --log trace
+```
+
 
