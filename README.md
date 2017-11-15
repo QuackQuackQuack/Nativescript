@@ -52,10 +52,10 @@ sudo gem install cocoapods
 ```
 
 ### 3. Install JDK 8 (JDK 8 설치 및 세팅)
-Install JDK 8<br />
+##### Install JDK 8<br />
 <http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-macosx-x64.dmg><br />
 
-Set the JAVA_HOME system environment variable (환경변수 설정)<br />
+##### Set the JAVA_HOME system environment variable (환경변수 설정)<br />
 ``` bash
 vi ~/.bash_profile or vi ~/.zshrc
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -63,20 +63,20 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 #8버전 사용
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 ```
-Install the Android SDK. (안드로이드 스튜디오 설치)<br />
-안드로이드 스튜디오 설치시 custom > AVD 같이 설치<br />
-<https://developer.android.com/studio/index.html><br />
-AVD 세팅<br />
+##### Install the Android SDK. (안드로이드 스튜디오 설치)<br />
+###### (설치시 custom > AVD 같이 설치)<br />
+<https://developer.android.com/studio/index.html><br /><br />
+##### AVD
 <https://docs.nativescript.org/tooling/android-virtual-devices><br />
 <https://developer.android.com/studio/run/managing-avds.html?hl=ko><br />
 
-brew cask install android-sdk<br />
+##### brew cask install android-sdk<br />
 (안드로이드 스튜디오 설치 후에도 설치가 되지 않았다고 나올시)<br />
 ``` bash
 brew cask install android-sdk
 ```
 
-Set the ANDROID_HOME system environment variable (환경변수 설정)
+##### Set the ANDROID_HOME system environment variable (환경변수 설정)
 ``` bash
 # NativeScript Guide
 export ANDROID_HOME=/usr/local/share/android-sdk
@@ -86,7 +86,7 @@ export ANDROID_HOME=/Users/{userName}/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 ```
 
-Android SDK Platform 25, Android SDK Build-Tools 25.0.2 or later, Android Support Repository
+##### Android SDK Platform 25, Android SDK Build-Tools 25.0.2 or later, Android Support Repository
 ``` bash
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-25" "build-tools;25.0.2" "extras;android;m2repository" "extras;google;m2repository"
 ```
